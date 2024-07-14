@@ -51,6 +51,8 @@ spec:
           endpoint: s3.amazonaws.com
     backend:
       replicas: 1
+      persistence:
+        volumeClaimsEnabled: false
       nodeSelector:
         role: "infra"
       tolerations:
@@ -69,6 +71,8 @@ spec:
           effect: "NoSchedule"
     write:
       replicas: 1
+      persistence:
+        volumeClaimsEnabled: false
       nodeSelector:
         role: "infra"
       tolerations:
