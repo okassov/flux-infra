@@ -42,7 +42,10 @@ spec:
 
       storage:
         type: s3
-        bucketNames: prod-marik-loki
+        bucketNames:
+          admin: prod-marik-loki
+          chunks: prod-marik-loki
+          ruler: prod-marik-loki
 
     backend:
       replicas: 1
