@@ -47,7 +47,7 @@ spec:
         #   chunks: prod-marik-loki
         #   ruler: prod-marik-loki
         s3:
-          s3: "s3://prod-marik-loki"
+          s3: "s3://us-east-1/prod-marik-loki"
           # region: us-east-1
           # endpoint: s3.amazonaws.com
     backend:
