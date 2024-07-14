@@ -42,13 +42,14 @@ spec:
 
       storage:
         type: s3
-        bucketNames:
-          admin: prod-marik-loki
-          chunks: prod-marik-loki
-          ruler: prod-marik-loki
+        # bucketNames:
+        #   admin: prod-marik-loki
+        #   chunks: prod-marik-loki
+        #   ruler: prod-marik-loki
         s3:
-          region: us-east-1
-          endpoint: s3.amazonaws.com
+          s3: "s3://prod-marik-loki"
+          # region: us-east-1
+          # endpoint: s3.amazonaws.com
     backend:
       replicas: 1
       persistence:
