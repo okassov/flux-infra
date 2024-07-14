@@ -84,6 +84,29 @@ spec:
     minio:
       enabled: false
 
+    lokiCanary:
+      enabled: false
+
+    chunksCache:
+      enabled: false
+      nodeSelector:
+        role: "infra"
+      tolerations:
+        - key: "role"
+          operator: "Equal"
+          value: "infra"
+          effect: "NoSchedule"
+
+    resultsCache:
+      enabled: false
+      nodeSelector:
+        role: "infra"
+      tolerations:
+        - key: "role"
+          operator: "Equal"
+          value: "infra"
+          effect: "NoSchedule"
+
     singleBinary:
       replicas: 0
 
